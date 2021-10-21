@@ -37,4 +37,4 @@ Deste modo, os commits devem ser regulares e completos, não devendo dar commit 
 
 ## E) Docker automatically prepares the required volume space as you start a container. Why is it important that you take an extra step configuring the volumes for a (production) database?
 
-Se queremos ter persistência numa base dados a correr num container, usamos volumes para mapear uma localização no disco do host numa localização no container. Desta forma, as leituras/escritas do container são feitas no host, e assim os dados não estão dependentes da execucação do mesmo, garantindo a que a base de dados no container tem persistência.
+Se queremos ter persistência numa base dados a correr num container, usamos volumes para mapear uma localização no disco do host numa localização no container. Desta forma, as leituras/escritas do container são feitas no host, e assim os dados não estão dependentes da execucação do mesmo, garantindo a que a base de dados no container tenha persistência.
