@@ -21,7 +21,8 @@ Compile phases:
 5.process-resources  
 6.compile  
 
-Project phases:
+Project phases:  
+
 validate: check if all information necessary for the build is available  
 compile: compile the source code  
 test-compile: compile the test source code  

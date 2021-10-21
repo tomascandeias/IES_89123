@@ -1,6 +1,6 @@
 # Git
 
-GIT create a rep and do the 1st commit
+GIT create a rep and do the 1st commit  
 $ cd project_folder 						                --move to the root of the working folder to be imported    
 $ git init 							                        --initialize a local git repo in this folder 
 $ git remote add origin REMOTE_URL 				            --must adapt the url for your repo   
