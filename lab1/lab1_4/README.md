@@ -1,22 +1,22 @@
 # Docker
-Docker: tecnologia que permite aos desenvolvedores empacotar, entregar e executar aplicações em containers
+Docker: tecnologia que permite aos desenvolvedores empacotar, entregar e executar aplicações em containers  
 
-Container: um "ambiente isolado"
+Container: um "ambiente isolado"  
 
-Container Image: imagem que é usada no container e que contém tudo o que é preciso para correr a aplicação (dependencias, confs, scripts, etc), bem como variáveis de ambiente para o container
+Container Image: imagem que é usada no container e que contém tudo o que é preciso para correr a aplicação (dependencias, confs, scripts, etc), bem como variáveis de ambiente para o container  
 
-Dockerfile deve ter este nome e nenhuma extensão associada
+Dockerfile deve ter este nome e nenhuma extensão associada  
 
-List all containers: docker ps -q
-Kill all containers: docker kill $(docker ps -q)
-Parar container: docker container stop containerID
+List all containers: docker ps -q  
+Kill all containers: docker kill $(docker ps -q)  
+Parar container: docker container stop containerID  
 
 Mapeamento de portos: 5432:5432 -> host:imagem
 
-docker run 	-d 					-> correr em segundo plano
-		    -r 					-> remove o container quando ele é terminado
-		    -v local:container 			-> pasta do host:/var/lib/postgresql/data
-		    -e POSTGRES_PASSWORD='DOCKER'		-> define variável de ambiente
+docker run 	-d 					-> correr em segundo plano  
+		    -r 					-> remove o container quando ele é terminado  
+		    -v local:container 			-> pasta do host:/var/lib/postgresql/data  
+		    -e POSTGRES_PASSWORD='DOCKER'		-> define variável de ambiente  
 
 
 Criar container:

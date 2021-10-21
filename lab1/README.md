@@ -1,6 +1,6 @@
-NMEC: 89123
-Nome: Tomás Candeias
-Curso: LEI
+NMEC: 89123  
+Nome: Tomás Candeias  
+Curso: LEI  
 
 Todas as notas relevantes para cada exercicio foram adiconadas na sua pasta no ficheiro readme.md
 
@@ -24,10 +24,11 @@ O Maven Build Tool é apropriado e facilita o trabalho do desenvolvedor quando e
 
 ## C) What would be a likely sequence of Git commands required to contribute with a new feature to a given project? (i.e., get a fresh copy, develop some increment, post back the added functionality)
 
-$ git pull --atualizar o noso repositorio local com as alteracoes postadas no remoto
-$ git add newchanges.txt
-$ git commit -m "newchanges for the X product"
-$ git push
+$ git pull --atualizar o noso repositorio local com as alteracoes postadas no remoto 
+Nota: lidar com eventuais conflitos antes de dar commit 
+$ git add newchanges.txt  
+$ git commit -m "newchanges for the X product"  
+$ git push  
 
 ## D) There are strong opinions on how to write Git commit messages... Find some best practices online and give your own informed recommendations on how to write good commit messages (in a teamproject).
 
@@ -36,3 +37,4 @@ Deste modo, os commits devem ser regulares e completos, não devendo dar commit 
 
 ## E) Docker automatically prepares the required volume space as you start a container. Why is it important that you take an extra step configuring the volumes for a (production) database?
 
+Se queremos ter persistência numa base dados a correr num container, usamos volumes para mapear uma localização no disco do host numa localização no container. Desta forma, as leituras/escritas do container são feitas no host, e assim os dados não estão dependentes da execucação do mesmo, garantindo a que a base de dados no container tem persistência.
