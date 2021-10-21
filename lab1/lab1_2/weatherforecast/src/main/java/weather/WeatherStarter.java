@@ -13,7 +13,7 @@ import java.util.logging.Logger;
  */
 public class WeatherStarter {
 
-    private static final int CITY_ID_AVEIRO = 1010500;
+    //private static final int CITY_ID_AVEIRO = 1010500;
     /*
     loggers provide a better alternative to System.out.println
     https://rules.sonarsource.com/java/tag/bad-practice/RSPEC-106
@@ -31,13 +31,16 @@ public class WeatherStarter {
                 .build();
 
         IpmaService service = retrofit.create(IpmaService.class);
-        //Call<IpmaCityForecast> callSync = service.getForecastForACity(CITY_ID_AVEIRO);
-        Call<IpmaCityForecast> callSync;
+
+        Call<IpmaCityForecast> callSync = null;
         try {
+            if(args.length == 0) throw new Exception();
+
             callSync = service.getForecastForACity(Integer.parseInt(args[0]));
-        }catch (NumberFormatException e){
-            System.out.println(e.getMessage());
-            callSync = service.getForecastForACity(CITY_ID_AVEIRO);
+
+        }catch  (Exception ex) {
+            logger.info("The chosen city doesn't exist, check: http://api.ipma.pt/");
+            ex.printStackTrace();
         }
 
         try {
@@ -45,8 +48,11 @@ public class WeatherStarter {
             IpmaCityForecast forecast = apiResponse.body();
 
             if (forecast != null) {
-                logger.info( "max temp for today: " + forecast.getData().
-                        listIterator().next().getTMax());
+                logger.info("Data retrieved from " + forecast.getOwner()
+                + "\n" + "Country: " + forecast.getCountry()
+                + "\n" + "City code: " + forecast.getGlobalIdLocal()
+                + "\n" + "Max temp for today: " + forecast.getData().listIterator().next().getTMax() + "ºC");
+
             } else {
                 logger.info( "No results!");
             }
