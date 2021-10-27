@@ -53,6 +53,7 @@ public class FirstServlet extends HttpServlet {
 		}
 		html += "</table>";
 		pw.println(html);
+		pw.append("\n");
 
 		pw.close();
 	}
