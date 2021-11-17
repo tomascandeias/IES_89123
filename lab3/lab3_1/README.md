@@ -13,6 +13,7 @@ user{...}, objetos que podem ser gravados e cujo ciclo de vida deve ser gerido p
 
 ### @Repository  
 <user,long>, user é a entity e long é o id  
+crudrepository<user,long> -> atua sobre entidades do tipo user e cada user é identificado por um long  
 
 ## b)
 
