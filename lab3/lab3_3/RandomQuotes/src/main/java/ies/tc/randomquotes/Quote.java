@@ -13,5 +13,8 @@ import javax.persistence.Table;
 public class Quote extends Movie{
 	@Getter @Setter
 	private String quote;
+	@Getter @Setter
+	private long movieId;
+	@Getter @Setter
+	private String title;
 }
-
