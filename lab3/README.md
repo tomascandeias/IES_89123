@@ -27,8 +27,8 @@ O @Controller é a classe que prepara o modelo para ser apresentado numa view po
 
 
 ### C) Explain the annotations @Table, @Colum, @Id foundin the Employee entity.  
-@Table - permite especificar detalhes da tabela associada aquela entidade.  
-@Colum - permite customizar o mapeamento entre os atributos da entidade e a coluna da base de dados.  
+@Table - permite especificar detalhes da tabela associada aquela entidade, no caso do Employee define o nome da tabela da classe como "employees"  
+@Colum - permite customizar o mapeamento entre os atributos da entidade e a coluna da base de dados, no caso do Employee é dito o nome da coluna a que o get está associado e define também que o valor não pode ser null.    
 @Id - especifica a chave primária de uma entidade.  
 
 ### D) Explain the use of the annotation @AutoWired (in the Rest Controller class).  
