@@ -17,4 +17,6 @@ public class Quote extends Movie{
 	private long movieId;
 	@Getter @Setter
 	private String title;
+	@Getter @Setter
+	private int year;
 }
