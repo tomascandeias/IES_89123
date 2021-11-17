@@ -1,7 +1,5 @@
-package ies.tc.randomquotes.controllers;
+package ies.tc.randomquotes;
 
-import ies.tc.randomquotes.models.Quote;
-import ies.tc.randomquotes.services.MovieService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

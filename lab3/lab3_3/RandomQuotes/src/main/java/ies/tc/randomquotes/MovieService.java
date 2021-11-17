@@ -1,7 +1,5 @@
-package ies.tc.randomquotes.services;
+package ies.tc.randomquotes;
 
-import ies.tc.randomquotes.models.Quote;
-import ies.tc.randomquotes.repositories.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
